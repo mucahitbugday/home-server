@@ -1,0 +1,4 @@
+
+# Ama _data ile biten dosya veya klasörleri ignore et
+*_data
+pass

@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  s_ssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql_server
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "2012696@MCbd"   # Güçlü bir şifre gir
+      ACCEPT_EULA: "Y"
+    volumes:
+      - mssql_data:/var/opt/mssql
+    restart: always
+
+volumes:
+  mssql_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: /mnt/hp-disk/docker-volumes/mssql-data
+      o: bind
+
