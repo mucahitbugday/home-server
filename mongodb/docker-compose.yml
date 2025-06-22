@@ -20,3 +20,5 @@ volumes:
       type: none
       device: /mnt/hp-disk/docker-volumes/mongodb-data
       o: bind
+
+##mongodb://mucahit:2012696MONGOdb@100.68.72.10:27017/testdb?authSource=admin
